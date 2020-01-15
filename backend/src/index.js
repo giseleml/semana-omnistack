@@ -1,6 +1,8 @@
 const express = require('express')
 const mongoose = require('mongoose')
+
 const app = express()
+
 const routes = require('./routes')
 
 // use = valido para toda a aplicação (poderia se limitar à app.get, app.post etc). Assim o express entende o json.
@@ -35,7 +37,7 @@ app.listen(8000)
 /* SOBRE DEPENDÊNCIAS *
 
 chocolatey to install yarn
-nodemon watches changes in the file. yarn nodemon <file>. Or as a custom script yarn start
+nodemon watches changes in the file. yarn nodemon <file>. Or as a custom script like yarn start
 mongoDB: cluster não é uma base de dados, é um servidor, podendo ter várias bases de dados no mesmo servidor
 mongoose: biblioteca que dá acesso ao node dentro da base de dados mongoDB, fazendo sua comunicação
 axios: faz chamadas para outras API's
