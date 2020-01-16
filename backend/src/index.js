@@ -4,8 +4,10 @@ const mongoose = require('mongoose')
 const app = express()
 
 const routes = require('./routes')
+const cors = require('cors')
 
 // use = valido para toda a aplicação (poderia se limitar à app.get, app.post etc). Assim o express entende o json.
+app.use(cors())
 app.use(express.json())
 
 // Conecta a aplicação ao banco de dados
@@ -41,6 +43,7 @@ nodemon watches changes in the file. yarn nodemon <file>. Or as a custom script 
 mongoDB: cluster não é uma base de dados, é um servidor, podendo ter várias bases de dados no mesmo servidor
 mongoose: biblioteca que dá acesso ao node dentro da base de dados mongoDB, fazendo sua comunicação
 axios: faz chamadas para outras API's
+cors: cross origin resource sharing 
 */
 
 /* SOBRE MÉTODOS HTTP:
